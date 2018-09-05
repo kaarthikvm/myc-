@@ -3,16 +3,16 @@ using namespace std;
 
 class b{
 public:
-   virtual void f(){
-       cout<<"fff"<<endl;
+   virtual void display(){
+       cout<<"base class display"<<endl;
    }
 };
 
 
 class d:public b {
 public:
-  virtual void f(){
-   cout<<"sdfsdfsdfsdf"<<endl;
+  virtual void display(){
+   cout<<"derived class display"<<endl;
   }
 };
 
@@ -20,6 +20,12 @@ int main(){
 
 d D;
 b *B=&D;
-B->f();
-cout<< B->__vptr;
+B->display();
+//cout<< B->__vptr;
+int i;
+cout<< "Enter pointer values";
+cin >> i;
+cout << i+B;
+
+
 }
